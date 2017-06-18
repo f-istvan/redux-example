@@ -1,19 +1,10 @@
 import { combineReducers } from 'redux';
 
-let initState = {
-    todos: [],
-    notes: []
-};
-
-let todos = (state = initState, action:any) => {
-    return initState;
-}
-
-let notes = (state = initState, action:any) => {
-    return initState;
-}
+import * as todoReducer from './todoReducer';
+import * as noteReducer from './noteReducer';
 
 export const todoApp = combineReducers({
-    todos,
-    notes
+    todos: todoReducer.todos,
+    notes: noteReducer.notes
 });
+
