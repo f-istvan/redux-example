@@ -1,6 +1,5 @@
-import { person } from './person';
-import * as RR from 'redux/';
+import { createStore } from 'redux/';
 
-console.log(RR);
+import { todoApp } from './reducers';
 
-console.log(person.firstName + ' ' + person.lastName);
+let store = createStore(todoApp);
